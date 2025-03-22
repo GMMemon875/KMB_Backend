@@ -10,7 +10,7 @@ export const Sendmassage = catchAsyncErrors(async (req, res, next) => {
   await Message.create({ firstName, lastName, email, phone, message });
   res.status(400).json({
     success: true,
-    massage: "Send Message successfully",
+    message: "Send Message successfully",
   });
 });
 export const getAllMessages = catchAsyncErrors(async (req, res, next) => {
