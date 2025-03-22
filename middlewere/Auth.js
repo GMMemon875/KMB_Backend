@@ -35,7 +35,7 @@ export const isPateintAthantication = catchAsyncErrors(
     const token = req.cookies.patientToken;
     if (!token) {
       // cookies nhe he to
-      return next(new ErrorHandler("Patient Not Athanticated", 400)); // ErrorHandler men ye code code chaluo
+      return next(new ErrorHandler("Your are Not Athanticated", 400)); // ErrorHandler men ye code code chaluo
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY); // agr Token he to us ko verify karoo ke .env men jo secret key he us se match karoo ke secret key match kar rahee hn
