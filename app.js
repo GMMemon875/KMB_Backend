@@ -10,17 +10,17 @@ import userRouter from "./router/userRouter.js";
 import appointment from "./router/appointmentRouter.js";
 
 const app = express();
-config({ path: "./Config/config.env" });     
+config({ path: "./Config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
+    origin: ["https://kmb-f4qg.vercel.app/", process.env.FRONTEND_URL_TWO],
     methods: ["GET", "POST", "PUT", "DELETE"], //PUT update karni ke lei
     credentials: true, //  credentials:true  acception to comunicate frontend and Backend
   })
 );
 
-app.use(cookieParser()); 
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
