@@ -50,7 +50,7 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
   // console.log(isConflict, doctor_firstName, doctor_lastName, department);
   if (isConflict.length === 0) {
     // ke agr is Conflict.length men koie data nhe he === 0 he
-    return next(new ErrorHandler("Doctor Not Found!", 400)); // to ye code chalauo
+    return next(new ErrorHandler("Service Provider Not Found!", 400)); // to ye code chalauo
   }
   if (isConflict.length > 1) {
     // ke agr isConlit.length > 1 it men doctor he
