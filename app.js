@@ -14,7 +14,10 @@ config({ path: "./Config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
+    origin: [
+      "https://kmb-f4qg.vercel.app/",
+      "https://dashboard-kmb.vercel.app/login",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"], //PUT update karni ke lei
     credentials: true, //  credentials:true  acception to comunicate frontend and Backend
   })
