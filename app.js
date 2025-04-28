@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: [
       "https://kmb-lmfb-git-main-gmmemon875s-projects.vercel.app",
-      "https://dashboard-kmb.vercel.app/login",
+      "https://kmb-dashboard.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"], //PUT update karni ke lei
     credentials: true, //  credentials:true  acception to comunicate frontend and Backend
