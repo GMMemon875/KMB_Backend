@@ -11,6 +11,8 @@ export const genrateToken = (user, message, statusCode, res) => {
         Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000 //.env se cookies Expire days decide keya he gaya he our (7 * 24 * 60 * 60 * 1000)is ka matlab hai 1 din ko milliseconds mein convert karna.
       ),
       httpOnly: true, //     httpOnly: true  => ka matlab hai cookie sirf HTTP requests ke through access hogi, JavaScript se nahi (security purpose).
+      secure: true, // required if HTTPS
+      sameSite: "None", // "Lax" or "Strict" also possible, test it
     })
     .json({
       success: true,
